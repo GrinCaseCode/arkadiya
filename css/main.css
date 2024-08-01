@@ -723,7 +723,6 @@ form {
     filter: brightness(100%);
 }
 
-
 .sertificats,
 .guest-house {
 	background-color: #322e35;
@@ -1439,4 +1438,7 @@ form {
 }
 .guest-house__button {
 	text-align: center;
+}
+.sertificats .subtitle-section {
+	margin-bottom: 0;
 }
