@@ -578,10 +578,13 @@
         align-items: flex-start;
     }
     .menu-mobile__items .header__item {
-        width: 50%;
+        width: 54%;
         padding-right: 10px;
         margin: 8px 0;
         color: rgba(255, 255, 255, 0.64);
+    }
+    .menu-mobile__items .header__item:nth-child(even) {
+        width: 46%;
     }
     .header__item a {
         color: rgba(255, 255, 255, 0.64);
@@ -621,6 +624,10 @@
         height: 5px;
         border-radius: 50%;
         background: #c29a6a;
+    }
+    .btn-main__title i {
+        font-size: 10px;
+        margin-left: 5px;
     }
 }
 
