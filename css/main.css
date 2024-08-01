@@ -503,6 +503,7 @@ form {
     height: 100%;
     display: block;
     z-index: -1;
+	overflow: hidden;
 }
 .item-room__image img {
     width: 100%;
@@ -510,6 +511,10 @@ form {
     object-fit: cover;
     font-family: 'object-fit: cover;';
     border-radius: 0.42vw;
+	transition: all 2s;
+}
+.item-room:hover .item-room__image img {
+	transform: scale(1.1);
 }
 .item-room__image::after {
     position: absolute;
