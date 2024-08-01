@@ -1432,3 +1432,6 @@ form {
 .menu-overlay {
 	display: none;
 }
+.guest-house__button {
+	text-align: center;
+}
