@@ -44,17 +44,6 @@ $(".menu-overlay").click(function() {
 	$("sandwich").removeClass("active");
 });
 
-	$(".item-review__bottom .link-page").click(function(e) {
-		e.preventDefault();
-		if ($(this).parents(".item-review").find(".item-review__hidden").is(":hidden")) {
-			$(this).parents(".item-review").find(".item-review__hidden").slideDown(200);
-			$(this).html("Свернуть");
-		} else {
-			$(this).parents(".item-review").find(".item-review__hidden").slideUp(200);
-			$(this).html("Читать больше");
-		}
-	});
-
 	$(".pane-location__arrow").click(function() {
 		$(".pane-location").toggleClass("active");
 	});
@@ -110,14 +99,127 @@ $(".menu-overlay").click(function() {
 			]
 		});
 
+		$('.slider-catalog').slick({
+			arrows: false,
+			dots: false,
+			infinite: true,
+			touchThreshold: 1000,
+			variableWidth: true,
+			autoplay: true,
+			autoplaySpeed: 4000,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			prevArrow: '<div class="slick-prev slick-arrow"><svg width="26" height="19" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.873 11.3612C24.0477 11.3612 25 10.4089 25 9.23416C25 8.05943 24.0477 7.10713 22.873 7.10713H12.9146L14.3648 1.78955L1 9.50004L14.3648 17.2105L12.7696 11.3612H22.873Z" stroke="#7F7A76"/></svg><div/>',
+			nextArrow: '<div class="slick-next slick-arrow"><svg width="26" height="19" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.12703 11.3612C1.9523 11.3612 1 10.4089 1 9.23416C1 8.05943 1.9523 7.10713 3.12703 7.10713H13.0854L11.6352 1.78955L25 9.50004L11.6352 17.2105L13.2304 11.3612H3.12703Z" stroke="#7F7A76"/></svg><div/>',
+			responsive: [
+				{
+					breakpoint: 992,
+					settings: {
+						
+					}
+				}
+				]
+			});
+
+			$('.slider-for').slick({
+				arrows: false,
+				dots: false,
+				infinite: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				asNavFor: '.slider-nav',
+				touchThreshold: 1000,
+				prevArrow: '<div class="slick-prev slick-arrow"><svg width="26" height="19" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.873 11.3612C24.0477 11.3612 25 10.4089 25 9.23416C25 8.05943 24.0477 7.10713 22.873 7.10713H12.9146L14.3648 1.78955L1 9.50004L14.3648 17.2105L12.7696 11.3612H22.873Z" stroke="#7F7A76"/></svg><div/>',
+				nextArrow: '<div class="slick-next slick-arrow"><svg width="26" height="19" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.12703 11.3612C1.9523 11.3612 1 10.4089 1 9.23416C1 8.05943 1.9523 7.10713 3.12703 7.10713H13.0854L11.6352 1.78955L25 9.50004L11.6352 17.2105L13.2304 11.3612H3.12703Z" stroke="#7F7A76"/></svg><div/>',
+			});
+		
+			$('.slider-nav').slick({
+				arrows: true,
+				dots: false,
+				infinite: false,
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				asNavFor: '.slider-for',
+				touchThreshold: 1000,
+				focusOnSelect: true,
+				prevArrow: '<div class="slick-prev slick-arrow"><svg width="26" height="19" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.873 11.3612C24.0477 11.3612 25 10.4089 25 9.23416C25 8.05943 24.0477 7.10713 22.873 7.10713H12.9146L14.3648 1.78955L1 9.50004L14.3648 17.2105L12.7696 11.3612H22.873Z" stroke="#7F7A76"/></svg><div/>',
+				nextArrow: '<div class="slick-next slick-arrow"><svg width="26" height="19" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.12703 11.3612C1.9523 11.3612 1 10.4089 1 9.23416C1 8.05943 1.9523 7.10713 3.12703 7.10713H13.0854L11.6352 1.78955L25 9.50004L11.6352 17.2105L13.2304 11.3612H3.12703Z" stroke="#7F7A76"/></svg><div/>',
+				responsive: [
+					{
+						breakpoint: 992,
+						settings: {
+							vertical: false,
+						verticalSwiping: false,
+						}
+					}
+				]
+			});
+
 	$(".input-phone").mask("+7 (999) 999-99-99");
 
 	var austDay = new Date($(".countdown").attr("date-time"));
 	$(".countdown").countdown({until: austDay, format: 'dHMS'});
 
 
-	 // стайлер для select
-	 $('select').styler();
+
+	$(document).on('select2:open', () => {
+		document.querySelector('.select2-search__field').focus();
+	  });
+
+	  $(".rating_action .rating__item").click(function() {
+		$(this).parent().removeClass("rating_1");
+		$(this).parent().removeClass("rating_2");
+		$(this).parent().removeClass("rating_3");
+		$(this).parent().removeClass("rating_4");
+		$(this).parent().removeClass("rating_5");
+		var rating = $(this).attr("data-value");
+		$(this).parent().addClass("rating_" + rating);
+		$(this).parent().addClass("rating-selected");
+	  });
+
+	  $('.form-send form').on('submit', function(event) {
+		var isValid = true;
+		
+		// Remove previous error classes
+		$('.item-form_error').removeClass('item-form_error');
+		
+		// Validate required fields
+		$('.required').each(function() {
+			if ($(this).val() === '') {
+				$(this).parent().addClass('item-form_error');
+				isValid = false;
+			}
+		});
+		
+		// Validate email
+		var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+		$('.email').each(function() {
+			if (!emailPattern.test($(this).val())) {
+				$(this).parent().addClass('item-form_error');
+				isValid = false;
+			}
+		});
+
+		    // Validate rating
+			if (!$('.rating').hasClass('rating-selected')) {
+				$('.rating').closest('.rating-wrap').addClass('item-form_error');
+				isValid = false;
+			}
+			
+			// Validate checkbox
+			if (!$('.checkbox input[type="checkbox"]').is(':checked')) {
+				$('.checkbox').addClass('item-form_error');
+				isValid = false;
+			}
+
+		
+		// If form is not valid, prevent submission
+		if (isValid) {
+			$.fancybox.close(true);
+		} else {
+			event.preventDefault();
+		}
+	});
 
 	//Попап менеджер FancyBox
 	//Документация: http://fancybox.net/howto
@@ -126,6 +228,17 @@ $(".menu-overlay").click(function() {
 	$(".fancybox").fancybox({
 		autoFocus: false,
 		backFocus: false,
+		touch: {
+			vertical: false,  // Отключает закрытие при вертикальном перетаскивании
+			horizontal: false // Отключает закрытие при горизонтальном перетаскивании
+		}
+	});
+
+	$('.item-form select').select2({
+		closeOnSelect : true,
+		allowClear: false,
+		containerCssClass: "test",
+		tags: true,
 	});
 
 
