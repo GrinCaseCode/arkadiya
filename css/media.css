@@ -1090,6 +1090,12 @@
     .conditions .row > div:last-child {
         margin-bottom: 0;
     }
+    .slider-nav__item {
+        border-width: 2px;
+    }
+    .single-room {
+        padding-bottom: 40px;
+    }
 }
 
 /* Small Devices, Tablets */
