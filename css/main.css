@@ -1855,9 +1855,9 @@ form {
 	height: 8.33vw;
 	resize: none;
 }
-.select2-container {
+.item-form .select2-container {
 	display: block;
-	width: 100%;
+	width: 100% !important;
 }
 .item-form .select2-container--default .select2-selection--single {
 	display: flex;
