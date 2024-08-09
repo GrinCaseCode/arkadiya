@@ -2374,3 +2374,6 @@ body > .select2-container {
 .conditions .btn-main.btn-main_transparent:hover .btn-main__icon img {
 	filter: brightness(0) invert(1);
 }
+.modal-block .item-review__text {
+	max-height: initial;
+}
