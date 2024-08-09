@@ -228,14 +228,10 @@ $(".menu-overlay").click(function() {
 	$(".fancybox").fancybox({
 		autoFocus: false,
 		backFocus: false,
-		touch: {
-			vertical: false,  // Отключает закрытие при вертикальном перетаскивании
-			horizontal: false // Отключает закрытие при горизонтальном перетаскивании
-		},
-		afterShow: function() {
-			$('.item-form select').select2();
-		}
+		touch: false
 	});
+
+
 
 	$('.item-form select').select2({
 		closeOnSelect : true,
