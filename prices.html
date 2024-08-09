@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Заголовок</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.css" />
+	<link rel="stylesheet" href="libs/fontawesome-free-5.12.0-web/css/all.min.css" />
+	<link rel="stylesheet" href="libs/fancybox-master/dist/jquery.fancybox.min.css" />
+	<link rel="stylesheet" href="libs/countdown/jquery.countdown.css" />
+	<link rel="stylesheet" href="libs/select2/select2.css" />
+	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick.css" />
+	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick-theme.css" />
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/main.css?ver=1.4" />
+	<link rel="stylesheet" href="css/media.css?ver=1.4" />
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<header class="header default">
+			<div class="header__top">
+				<div class="container">
+					<div class="header__wrapper">
+						<div class="header__item">
+							<div class="icon-small">
+								<img src="img/ic_pin.svg" alt="alt">
+							</div>
+							<p>ул.Олимпийская, 10, пгт.Заозерное, Евпатория, Крым</p>
+						</div>
+						<div class="header__item">
+							<div class="icon-small">
+								<img src="img/ic_time.svg" alt="alt">
+							</div>
+							<p>Время работы: 24/7</p>
+						</div>
+						<div class="header__item">
+							<div class="icon-small">
+								<img src="img/ic_mail.svg" alt="alt">
+							</div>
+							<p><a href="mailto:arkadiaotel@mail.ru">arkadiaotel@mail.ru</a></p>
+						</div>
+						<div class="header__item">
+							<div class="icon-small">
+								<img src="img/ic_phone.svg" alt="alt">
+							</div>
+							<p><a href="tel:+79787104677">+7 978 710 4677</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom">
+				<div class="container">
+					<div class="header__wrapper">
+						<span class='sandwich'>
+							<span class='sw-topper'></span>
+							<span class='sw-bottom'></span>
+							<span class='sw-footer'></span>
+						</span>
+						<a href="#" class="logo">
+							<img src="img/logo.svg" alt="alt">
+						</a>
+						<ul class="menu">
+							<li><a href="#">О нас</a></li>
+							<li><a href="#">Цены</a></li>
+							<li><a href="#">Номера</a></li>
+							<li><a href="#">Услуги</a></li>
+							<li><a href="#">Акции</a></li>
+							<li><a href="#">Отзывы</a></li>
+							<li><a href="#">Галерея</a></li>
+							<li><a href="#">Бронирование</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+						<a href="tel:+79787104677" class="phone-mobile">
+							<i class="fas fa-phone-alt"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="menu-mobile">
+				<ul class="menu">
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Цены</a></li>
+					<li><a href="#">Номера</a></li>
+					<li><a href="#">Услуги</a></li>
+					<li><a href="#">Акции</a></li>
+					<li><a href="#">Отзывы</a></li>
+					<li><a href="#">Галерея</a></li>
+					<li><a href="#">Бронирование</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+				<div class="menu-mobile__items">
+					<div class="header__item">
+						<div class="icon-small">
+							<img src="img/ic_pin.svg" alt="alt">
+						</div>
+						<p>ул.Олимпийская, 10, пгт.Заозерное, Евпатория, Крым</p>
+					</div>
+					<div class="header__item">
+						<div class="icon-small">
+							<img src="img/ic_time.svg" alt="alt">
+						</div>
+						<p>Время работы: 24/7</p>
+					</div>
+					<div class="header__item">
+						<div class="icon-small">
+							<img src="img/ic_mail.svg" alt="alt">
+						</div>
+						<p><a href="mailto:arkadiaotel@mail.ru">arkadiaotel@mail.ru</a></p>
+					</div>
+					<div class="header__item">
+						<div class="icon-small">
+							<img src="img/ic_phone.svg" alt="alt">
+						</div>
+						<p><a href="tel:+79787104677">+7 978 710 4677</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="menu-overlay"></div>
+		</header>
+
+		<section class="billbord-page billbord-page_prices">
+			<div class="container">
+				<h1 class="title-big">цены</h1>
+			</div>
+		</section>
+
+		<section class="page-prices">
+			<div class="container">
+				<ul class="breadcrumbs">
+					<li><a href="#">Главная</a></li>
+					<li>Цены</li>
+				</ul>
+				<h2 class="title-section">Цены указаны за 2-местное размещение в сутки <br>(с 3-разовым питанием) на 2021 гол</h2>
+				<div class="table-prices">
+					<table>
+						<thead>
+							<tr>
+								<th colspan="2">Номера</th>
+								<th>01.05 - 16.06</th>
+								<th>16.06 - 30.08</th>
+								<th>30.08 - 25.09</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<a href="#" class="image-td">
+										<img src="img/td1.jpg" alt="alt">
+									</a>
+								</td>
+								<td>
+									<a href="#" class="title-block">1-комнатный «Стандарт»</a>
+									<div class="features-wrap">
+										<div class="feature"><img src="img/ic_feature1.svg" alt="alt"><span>3 Гостей</span></div>
+										<div class="feature"><img src="img/ic_feature2.svg" alt="alt"><span>16 м<sup>2</sup></span></div>
+									</div>
+								</td>
+								<td data-title="01.05 - 16.06">
+									<div class="title-block title-block_price">3 750</div>
+								</td>
+								<td data-title="16.06 - 30.08">
+									<div class="title-block title-block_price">4 550</div>
+								</td>
+								<td data-title="30.08 - 25.09">
+									<div class="title-block title-block_price">3 800</div>
+								</td>
+								<td>
+									<a href="#" class="btn-main"><span class="btn-main__text">Отправить запрос</span> <span class="btn-main__icon"><img src="img/arrow.svg" alt="alt"></span></a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#" class="image-td">
+										<img src="img/td2.jpg" alt="alt">
+									</a>
+								</td>
+								<td>
+									<a href="#" class="title-block">1-комнатный «Стандарт улучшенный»</a>
+									<div class="features-wrap">
+										<div class="feature"><img src="img/ic_feature1.svg" alt="alt"><span>4 Гостей</span></div>
+										<div class="feature"><img src="img/ic_feature2.svg" alt="alt"><span>24 м<sup>2</sup></span></div>
+									</div>
+								</td>
+								<td data-title="01.05 - 16.06">
+									<div class="title-block title-block_price">4 450</div>
+								</td>
+								<td data-title="16.06 - 30.08">
+									<div class="title-block title-block_price">5 550</div>
+								</td>
+								<td data-title="30.08 - 25.09">
+									<div class="title-block title-block_price">4 500</div>
+								</td>
+								<td>
+									<a href="#" class="btn-main"><span class="btn-main__text">Отправить запрос</span> <span class="btn-main__icon"><img src="img/arrow.svg" alt="alt"></span></a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#" class="image-td">
+										<img src="img/td3.jpg" alt="alt">
+									</a>
+								</td>
+								<td>
+									<a href="#" class="title-block">1-комнатный «Люкс»</a>
+									<div class="features-wrap">
+										<div class="feature"><img src="img/ic_feature1.svg" alt="alt"><span>3 Гостей</span></div>
+										<div class="feature"><img src="img/ic_feature2.svg" alt="alt"><span>30 м<sup>2</sup></span></div>
+									</div>
+								</td>
+								<td data-title="01.05 - 16.06">
+									<div class="title-block title-block_price">4 800</div>
+								</td>
+								<td data-title="16.06 - 30.08">
+									<div class="title-block title-block_price">6 000</div>
+								</td>
+								<td data-title="30.08 - 25.09">
+									<div class="title-block title-block_price">4 850</div>
+								</td>
+								<td>
+									<a href="#" class="btn-main"><span class="btn-main__text">Отправить запрос</span> <span class="btn-main__icon"><img src="img/arrow.svg" alt="alt"></span></a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#" class="image-td">
+										<img src="img/td4.jpg" alt="alt">
+									</a>
+								</td>
+								<td>
+									<a href="#" class="title-block">2-комнатный «Люкс»</a>
+									<div class="features-wrap">
+										<div class="feature"><img src="img/ic_feature1.svg" alt="alt"><span>5 Гостей</span></div>
+										<div class="feature"><img src="img/ic_feature2.svg" alt="alt"><span>40 м<sup>2</sup></span></div>
+									</div>
+								</td>
+								<td data-title="01.05 - 16.06">
+									<div class="title-block title-block_price">4 850</div>
+								</td>
+								<td data-title="16.06 - 30.08">
+									<div class="title-block title-block_price">6 050</div>
+								</td>
+								<td data-title="30.08 - 25.09">
+									<div class="title-block title-block_price">4 900</div>
+								</td>
+								<td>
+									<a href="#" class="btn-main"><span class="btn-main__text">Отправить запрос</span> <span class="btn-main__icon"><img src="img/arrow.svg" alt="alt"></span></a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#" class="image-td">
+										<img src="img/td5.jpg" alt="alt">
+									</a>
+								</td>
+								<td>
+									<a href="#" class="title-block">Аппартаменты</a>
+									<div class="features-wrap">
+										<div class="feature"><img src="img/ic_feature1.svg" alt="alt"><span>4 Гостей</span></div>
+										<div class="feature"><img src="img/ic_feature2.svg" alt="alt"><span>50 м<sup>2</sup></span></div>
+									</div>
+								</td>
+								<td data-title="01.05 - 16.06">
+									<div class="title-block title-block_price">6 000</div>
+								</td>
+								<td data-title="16.06 - 30.08">
+									<div class="title-block title-block_price">8 600</div>
+								</td>
+								<td data-title="30.08 - 25.09">
+									<div class="title-block title-block_price">6 050</div>
+								</td>
+								<td>
+									<a href="#" class="btn-main"><span class="btn-main__text">Отправить запрос</span> <span class="btn-main__icon"><img src="img/arrow.svg" alt="alt"></span></a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#" class="image-td">
+										<img src="img/td6.jpg" alt="alt">
+									</a>
+								</td>
+								<td>
+									<a href="#" class="title-block">2-комнатные Аппартаменты</a>
+									<div class="features-wrap">
+										<div class="feature"><img src="img/ic_feature1.svg" alt="alt"><span>4 Гостей</span></div>
+										<div class="feature"><img src="img/ic_feature2.svg" alt="alt"><span>65 м<sup>2</sup></span></div>
+									</div>
+								</td>
+								<td data-title="01.05 - 16.06">
+									<div class="title-block title-block_price">6 300</div>
+								</td>
+								<td data-title="16.06 - 30.08">
+									<div class="title-block title-block_price">8 800</div>
+								</td>
+								<td data-title="30.08 - 25.09">
+									<div class="title-block title-block_price">6 350</div>
+								</td>
+								<td>
+									<a href="#" class="btn-main"><span class="btn-main__text">Отправить запрос</span> <span class="btn-main__icon"><img src="img/arrow.svg" alt="alt"></span></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+		<section class="rules">
+			<div class="container">
+				<h2 class="title-section">Правила проживания</h2>
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="title-small">Обратите внимание:</div>
+						<p>Обратите внимание:</p>
+						<p>Обязательным условием проживания в гостевом доме является <strong>трехразовое питание</strong>. Если вы уезжаете на экскурсию или по другой причине пропускаете питание, мы приготовим для вас продуктовый сухпаек, но <strong>обязательно предупредите нас за день до этого</strong> (один сухпаек на одного гостя). Компенсация за полный или частичный отказ от питания не предусмотрена.</p>
+						<p>Один ребенок 0-4 года без предоставления дополнительного места и без питания проживает бесплатно</p>
+					</div>
+					<div class="col-lg-6">
+						<p>При поселении необходимо предоставить документ, удостоверяющий личность.</p>
+						<p>Стоимость дополнительного места без питания для детей (второго ребенка) 0-4 года - 200 руб.</p>
+						<p>В качестве дополнительного места предоставляется кровать-раскладушка или детская кроватка.</p>
+						<p>Проживание с домашними животными разрешено исключительно по предварительному согласованию!</p>
+						<p>Расчетное время: заезд после 14:00 час, выезд до 12:00 час.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="services services_page">
+			<div class="container">
+				<h3 class="subtitle-section">гостевой дом</h3>
+				<h2 class="title-section">В стоимость входит</h2>
+				<div class="row row_services">
+					<div class="col-lg-4 col-md-6">
+						<div class="item-service">
+							<div class="icon-page">
+								<img src="img/ic_service1.svg" alt="alt">
+							</div>
+							<div class="title-block">Открытый бассейн</div>
+							<p>Колоссальные панорамные окна. Невероятный вид на крымские пейзажи. Потрясающая природа.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="item-service">
+							<div class="icon-page">
+								<img src="img/ic_service2.svg" alt="alt">
+							</div>
+							<div class="title-block">Детская площадка</div>
+							<p>Колоссальные панорамные окна. Невероятный вид на крымские пейзажи. Потрясающая природа.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="item-service">
+							<div class="icon-page">
+								<img src="img/ic_service3.svg" alt="alt">
+							</div>
+							<div class="title-block">3-х Разовое питание</div>
+							<p>Колоссальные панорамные окна. Невероятный вид на крымские пейзажи. Потрясающая природа.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="item-service">
+							<div class="icon-page">
+								<img src="img/ic_service4.svg" alt="alt">
+							</div>
+							<div class="title-block">До пляжа 600 м</div>
+							<p>Колоссальные панорамные окна. Невероятный вид на крымские пейзажи. Потрясающая природа.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="item-service">
+							<div class="icon-page">
+								<img src="img/ic_service5.svg" alt="alt">
+							</div>
+							<div class="title-block">Детская анимация</div>
+							<p>Колоссальные панорамные окна. Невероятный вид на крымские пейзажи. Потрясающая природа... <a href="#">Перейти</a></p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="item-service">
+							<div class="icon-page">
+								<img src="img/ic_service9.svg" alt="alt">
+							</div>
+							<div class="title-block">3-х Разовое питание</div>
+							<p>Колоссальные панорамные окна. Невероятный вид на крымские пейзажи. Потрясающая природа.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="item-service">
+							<div class="icon-page">
+								<img src="img/ic_service7.svg" alt="alt">
+							</div>
+							<div class="title-block">Wi-Fi</div>
+							<p>Колоссальные панорамные окна. Невероятный вид на крымские пейзажи. Потрясающая природа.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="item-service">
+							<div class="icon-page">
+								<img src="img/ic_service8.svg" alt="alt">
+							</div>
+							<div class="title-block">Настольный теннис</div>
+							<p>Колоссальные панорамные окна. Невероятный вид на крымские пейзажи. Потрясающая природа.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="item-service">
+							<div class="icon-page">
+								<img src="img/ic_service6.svg" alt="alt">
+							</div>
+							<div class="title-block">Парковка</div>
+							<p>Колоссальные панорамные окна. Невероятный вид на крымские пейзажи. Потрясающая природа.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="article-about">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 offset-lg-2">
+						<h2 class="title-section">Чем хорош отдых в Заозерном</h2>
+						<p>В Крыму очень много различных курортов, каждый из которых отличается от прочих и имеет свои уникальные особенности. Довольно сложно сразу определиться с выбором места для отдыха. Чтобы не прогадать, нужно точно знать, чего же вы ждете от этой поездки. Если вы приняли решение посетить полуостров с детьми и насладиться спокойным семейным отдыхом, то рекомендуем вам обратить внимание на курортный поселок Заозерное. Он располагается неподалеку от известного города Евпатория на западном побережбе Крыма.</p>
+						<img src="img/article_about1.jpg" alt="alt">
+						<h3>Выгодное местоположение курорта</h3>
+						<p>Местоположение курорта очень выгодное, так как он находится достаточно далеко от Евпатори, чтобы здесь не было заметно влияние города и сохранилась естественная красота степной природы, свежий чистый воздух и провинциальное очарование. Но вместе с тем, при желании вы быстро можете оказаться в городе, всего 10 минут на автомобиле или общественном транспорте, которный здесь ходит довольно часто. Но вряд ли вы пожелаете уезжать отсюда, ведь в Заозерном есть все необходимое.</p>
+						<blockquote>Отдых в Заозерном - цены в этом месте заинтересуют тех, кто ищет оптимальное решение для недорогого отдыха в Крыму</blockquote>
+						<h3>Развитая инфраструктура поселка</h3>
+						<p>Инфраструктура поселка предлагает широкий выбор объектов размещения и развлечений. Все гостевые дома в Заозерном будут рады принять вас на отдых. Остановившись в одном из них, вы на собственном опыте ощутите, что сервис и обслуживание здесь не менее хороши, чем в отелях крупных городов, зато уюта и гостеприимства намного больше, что даже располагает к себе.</p>
+						<h3>Доступные цены</h3>
+						<p>Не менее приятным фактором являются на отдых в Заозерном цены, которые здесь все же ниже, чем на более популярных курортах. А в условиях современности, как ни крути, но материальная сторона вопроса чаще всего очень важна. Но, к счастью, на отдых Зазозерное цены не оттолкнут даже туристов с невысоким урвнем дохода.</p>
+						<h3>Как нас найти</h3>
+						<p>Из г.Симферополя на автобусе или электричке до г.Евпатория, дальше от автовокзала или ж/д вокзала на автобусе №8 до остановки «Лимановка», от остановки в 200-х метрах по улицек Олимпийская - бело/желтое двухэтажное здание с зеленой крышей и солнечными батареями (видно с остановки) - это и есть гостевой дом «Аркадия».</p>
+						<img src="img/article_about2.jpg" alt="alt">
+						<p>Не менее приятным фактором являются на отдых в Заозерном цены, которые здесь все же ниже, чем на более популярных курортах. А в условиях современности, как ни крути, но материальная сторона вопроса чаще всего очень важна. Но, к счастью, на отдых Заозерное цены не оттолкнут даже туристов с невысоким уровнем дохода.</p>
+						<h3>Как грамотно спланирвовать бюджет на отдых</h3>
+						<p>Перед тем, как отправиться отдыхать, вам стоит заранее спланировать свой бюджет, особенно если он ограничен. Это поможет вам избавиться от лишних затрат. А сэкономленные деньги вы сможете потратить на развлечения или экскурсии.</p>
+						<p>Если вы рассчитываете на недорогой отдых, Заозерное цены предлагает доступные каждому. Этот курортный поселок предоставляет большой выбор разнообразного жилья по демократическим расценкам. Вы сможете отдохнуть с комфортом у моря, причем, не переплачивая лишних денег.</p>
+						<p>Для туристов, которые планируют бюджет на отдых, Заозерное цены на питание, продукты, развлечения предоставляет на доступном уровне. Здесь все намного дешевле, чем в крупных и раскрученых курортах Крыма. При этом вы можете рассчитывать на полноценный отдых у моря, полный незабываемых эмоций.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="location">
+			<div class="container">
+				<h3 class="subtitle-section">гостевой дом</h3>
+				<h2 class="title-section">Как нас найти</h2>
+				<div class="location__wrap">
+					<div class="pane-location">
+						<div class="card-main">
+							<div class="card-main__image">
+								<img src="img/card_main1.jpg" alt="alt">
+							</div>
+							<div class="card-main__item">
+								<div class="card-main__title">Адрес:</div>
+								<div class="card-main__value">ул. Олимпийская, 10, пгт. Заозерное, Евпатория, Крым</div>
+							</div>
+							<div class="card-main__item">
+								<div class="card-main__title">E-mail:</div>
+								<div class="card-main__value"><a href="mailto:arkadiaotel@mail.ru">arkadiaotel@mail.ru</a></div>
+							</div>
+							<div class="card-main__item">
+								<div class="card-main__title">Контакты:</div>
+								<div class="card-main__value">
+									<a href="tel:+79787104677">+7-978-71-04-677</a>
+									<a href="tel:+79787104677">+7-978-71-04-677</a>
+								</div>
+							</div>
+							<a href="#" class="btn-main"><span class="btn-main__text">задать вопрос</span> <span class="btn-main__icon"><img src="img/arrow.svg" alt="alt"></span></a>
+						</div>
+						<div class="pane-location__arrow"><i class="far fa-chevron-right"></i></div>
+						<div class="pane-location__info"><div class="ic-info">i</div>Показать боковую панель</div>
+					</div>
+					<div id="map"></div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3">
+						<a href="#" class="logo">
+							<img src="img/logo.svg" alt="alt">
+						</a>
+					</div>
+					<div class="col-lg-6">
+						<ul class="footer__nav">
+							<li><a href="#">О нас</a></li>
+							<li><a href="#">Цены</a></li>
+							<li><a href="#">Номера</a></li>
+							<li><a href="#">Услуги</a></li>
+							<li><a href="#">Акции</a></li>
+							<li><a href="#">Отзывы</a></li>
+							<li><a href="#">Галерея</a></li>
+							<li><a href="#">Бронирование</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-3">
+						<ul class="footer__links">
+							<li><a href="#">Политика конфиденциальности</a></li>
+							<li><a href="#">Правила проживания</a></li>
+						</ul>
+						<ul class="list-socials">
+							<li><a href="#" target="_blank"><img src="img/soc1.svg" alt="alt"></a></li>
+							<li><a href="#" target="_blank"><img src="img/soc2.svg" alt="alt"></a></li>
+							<li><a href="#" target="_blank"><img src="img/soc3.svg" alt="alt"></a></li>
+							<li><a href="#" target="_blank"><img src="img/soc4.svg" alt="alt"></a></li>
+							<li><a href="#" target="_blank"><img src="img/soc5.svg" alt="alt"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">© Copyright 2021 Аркадия «Гостевой Дом»</div>
+		</footer>
+		
+	</div>
+
+	<div id="modal-full-review" class="modal-block modal-block_review">
+		<div class="item-review">
+			<div class="item-review__head">
+				<div class="item-review__image">
+					<img src="img/review1.jpg" alt="alt">
+				</div>
+				<div class="item-review__content">
+					<div class="title-block">Татьяна ким</div>
+					<div class="item-review__descr">Санкт-Петербург</div>
+					<div class="rating rating_5">
+						<div class="rating__item"></div>
+						<div class="rating__item"></div>
+						<div class="rating__item"></div>
+						<div class="rating__item"></div>
+						<div class="rating__item"></div>
+					</div>
+				</div>
+			</div>
+			<div class="item-review__text">
+				<p>Мы с нашей большой семьей: с мужем и тремя детьми и мамой уже третий год подряд отдыхаем в живописном месте Заозерное в отеле "Аркадия". Заранее бронировали двухкомнатный люкс. Спасибо огромное всему персоналу отеля "Аркадия" за великолепный отдых. Весь персонал добрый и отзывчивый, работает как одна большая семья, организовано все обслуживание на высшем уровне. Мы с нашей большой семьей: с мужем и тремя детьми и мамой уже третий год подряд отдыхаем в живописном месте Заозерное в отеле "Аркадия". Заранее бронировали двухкомнатный люкс. Спасибо огромное всему персоналу отеля "Аркадия" за великолепный отдых. Весь персонал добрый и отзывчивый, работает как одна большая семья, организовано все обслуживание на высшем уровне.</p>
+			</div>
+			<div class="item-review__bottom">
+				<div class="item-review__date">25 августа 2021 г.</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal-review" class="modal-block">
+		<div class="modal-wrap">
+			<div class="title-section">Написать отзыв</div>
+			<div class="descr-title">Оставьте отзыв о нашем Гостевом Доме</div>
+			<div class="form-send">
+				<form>
+					<div class="item-form">
+						<div class="item-form__icon">
+							<img src="img/input_name.svg" alt="alt">
+						</div>
+						<input type="text" placeholder="Ваше имя" class="required">
+					</div>
+					<div class="rating-wrap">
+						<div class="rating-wrap__title">Оцените нашу работу:</div>
+						<div class="rating rating_action">
+							<div class="rating__item" data-value="1"></div>
+							<div class="rating__item" data-value="2"></div>
+							<div class="rating__item" data-value="3"></div>
+							<div class="rating__item" data-value="4"></div>
+							<div class="rating__item" data-value="5"></div>
+						</div>
+					</div>
+					<div class="item-form">
+						<div class="item-form__icon">
+							<img src="img/input_email.svg" alt="alt">
+						</div>
+						<input type="text" placeholder="Ваш E-mail" class="required email">
+					</div>
+					<div class="item-form">
+						<div class="item-form__icon">
+							<img src="img/input_location.svg" alt="alt">
+						</div>
+						<select  class="required">
+							<option value="">Ваш город</option>
+							<option value="Москва">Москва</option>
+							<option value="Санкт-Петербург">Санкт-Петербург</option>
+							<option value="Новосибирск">Новосибирск</option>
+							<option value="Екатеринбург">Екатеринбург</option>
+							<option value="Казань">Казань</option>
+						</select>
+					</div>
+					<div class="item-form">
+						<div class="item-form__icon">
+							<img src="img/input_text.svg" alt="alt">
+						</div>
+						<textarea placeholder="Ваш отзыв" class="required"></textarea>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" class="required" />
+							<span>Даю согласие на обработку персональных данных, и согласен с <a href="#">политикой конфиденциальности</a></span>
+						</label>
+					</div>
+					<div class="btn-main">
+						<span class="btn-main__text">Отправить</span> 
+						<span class="btn-main__icon"><img src="img/arrow.svg" alt="alt"></span>
+						<input type="submit">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+	<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+	<script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+	<script src="libs/fancybox-master/dist/jquery.fancybox.min.js"></script>
+	<script src="libs/slick-1.5.9/slick/slick.min.js"></script>
+	<script src="libs/scroll2id/PageScroll2id.min.js"></script>
+	<script src="libs/mask/jquery.maskedinput.js"></script>
+	<script src="libs/countdown/jquery.plugin.js"></script>
+	<script src="libs/countdown/jquery.countdown.min.js"></script>
+	<script src="libs/countdown/jquery.countdown-ru.js"></script>
+	<script src="libs/select2/select2.js"></script>
+	<script src="js/common.js?ver=1.4"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+	<script>
+		$(document).ready(function() {
+		ymaps.ready(init);
+
+		function init() {
+			var myMap = new ymaps.Map('map', {
+				center: [45.182053, 33.306476],
+				zoom: 18
+			}, {
+				searchControlProvider: 'yandex#search'
+			});		
+			myPlacemark = new ymaps.Placemark([45.182053, 33.306476], {
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/pin.svg',
+				hideIconOnBalloonOpen: false,
+				iconImageSize: [42, 56],
+				iconImageOffset: [-21, -56],
+				balloonOffset: [ 0, -56 ]
+			});
+
+			myMap.controls.remove('searchControl');
+			myMap.behaviors.disable('scrollZoom');
+			myMap.geoObjects.add(myPlacemark);
+
+		}
+	});
+	
+	</script>
+	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+</body>
+</html>
