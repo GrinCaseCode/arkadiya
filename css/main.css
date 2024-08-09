@@ -1796,7 +1796,7 @@ form {
 	align-items: center;
 	justify-content: center;
 }
-.fancybox-button svg path {
+.modal-block .fancybox-button svg path {
     fill: #322B27;
 }
 .modal-wrap {
