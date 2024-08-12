@@ -155,6 +155,25 @@ $(".menu-overlay").click(function() {
 				]
 			});
 
+			$('.slider-recommendations').slick({
+				arrows: true,
+				dots: false,
+				infinite: true,
+				touchThreshold: 1000,
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				prevArrow: '<div class="slick-prev slick-arrow"><svg width="26" height="19" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.873 11.3612C24.0477 11.3612 25 10.4089 25 9.23416C25 8.05943 24.0477 7.10713 22.873 7.10713H12.9146L14.3648 1.78955L1 9.50004L14.3648 17.2105L12.7696 11.3612H22.873Z" stroke="#7F7A76"/></svg><div/>',
+				nextArrow: '<div class="slick-next slick-arrow"><svg width="26" height="19" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.12703 11.3612C1.9523 11.3612 1 10.4089 1 9.23416C1 8.05943 1.9523 7.10713 3.12703 7.10713H13.0854L11.6352 1.78955L25 9.50004L11.6352 17.2105L13.2304 11.3612H3.12703Z" stroke="#7F7A76"/></svg><div/>',
+				responsive: [
+					{
+						breakpoint: 992,
+						settings: {
+							slidesToShow: 1,
+						}
+					}
+					]
+				});
+
 	$(".input-phone").mask("+7 (999) 999-99-99");
 
 	var austDay = new Date($(".countdown").attr("date-time"));
@@ -177,14 +196,26 @@ $(".menu-overlay").click(function() {
 		$(this).parent().addClass("rating-selected");
 	  });
 
+
+	  if ($('#time-picker').length > 0) {
+		const elem = document.getElementById('time-picker');
+		const rangepicker = new DateRangePicker(elem, {
+			format: 'dd/mm/yyyy',
+			language: 'ru',
+			autohide: true
+		}); 
+	}
+
+
+	  //Валидация отзыва
 	  $('.form-send form').on('submit', function(event) {
 		var isValid = true;
 		
 		// Remove previous error classes
-		$('.item-form_error').removeClass('item-form_error');
+		$(this).find('.item-form_error').removeClass('item-form_error');
 		
 		// Validate required fields
-		$('.required').each(function() {
+		$(this).find('.required').each(function() {
 			if ($(this).val() === '') {
 				$(this).parent().addClass('item-form_error');
 				isValid = false;
@@ -193,7 +224,7 @@ $(".menu-overlay").click(function() {
 		
 		// Validate email
 		var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-		$('.email').each(function() {
+		$(this).find('.email').each(function() {
 			if (!emailPattern.test($(this).val())) {
 				$(this).parent().addClass('item-form_error');
 				isValid = false;
@@ -201,25 +232,140 @@ $(".menu-overlay").click(function() {
 		});
 
 		    // Validate rating
-			if (!$('.rating').hasClass('rating-selected')) {
-				$('.rating').closest('.rating-wrap').addClass('item-form_error');
+			if (!$(this).find('.rating').hasClass('rating-selected')) {
+				$(this).find('.rating').closest('.rating-wrap').addClass('item-form_error');
 				isValid = false;
 			}
 			
 			// Validate checkbox
-			if (!$('.checkbox input[type="checkbox"]').is(':checked')) {
-				$('.checkbox').addClass('item-form_error');
+			if (!$(this).find('.checkbox input[type="checkbox"]').is(':checked')) {
+				$(this).find('.checkbox').addClass('item-form_error');
+				isValid = false;
+			}
+		
+		// If form is not valid, prevent submission
+		if (isValid) {
+			event.preventDefault();
+			$.fancybox.close(true);
+			setTimeout(function() {
+				$.fancybox.open({
+					src  : '#modal-thanks-review',
+					type: 'inline',
+					touch: false
+				  });
+			}, 400);
+			
+		} else {
+			event.preventDefault();
+		}
+	});
+
+	 //Валидация Задать вопрос
+	$('.form-help form').on('submit', function(event) {
+		var isValid = true;
+		
+		// Remove previous error classes
+		$(this).find('.item-form_error').removeClass('item-form_error');
+		
+		// Validate required fields
+		$(this).find('.required').each(function() {
+			if ($(this).val() === '') {
+				$(this).parent().addClass('item-form_error');
+				isValid = false;
+			}
+		});
+		
+		// Validate email
+		var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+		$(this).find('.email').each(function() {
+			if (!emailPattern.test($(this).val())) {
+				$(this).parent().addClass('item-form_error');
+				isValid = false;
+			}
+		});
+			
+			// Validate checkbox
+			if (!$(this).find('.checkbox input[type="checkbox"]').is(':checked')) {
+				$(this).find('.checkbox').addClass('item-form_error');
 				isValid = false;
 			}
 
 		
 		// If form is not valid, prevent submission
 		if (isValid) {
+			event.preventDefault();
 			$.fancybox.close(true);
+			setTimeout(function() {
+				$.fancybox.open({
+					src  : '#modal-thanks-application',
+					type: 'inline',
+					touch: false
+				  });
+			}, 400);
+			
+			
 		} else {
 			event.preventDefault();
 		}
 	});
+
+	//Валидация бронирования
+	$('.form-booking form').on('submit', function(event) {
+		var isValid = true;
+		
+		// Remove previous error classes
+		$(this).find('.item-form_error').removeClass('item-form_error');
+		
+		// Validate required fields
+		$(this).find('.required').each(function() {
+			if ($(this).val() === '') {
+				$(this).parent().addClass('item-form_error');
+				isValid = false;
+			}
+		});
+		
+		// Validate email
+		var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+		$(this).find('.email').each(function() {
+			if (!emailPattern.test($(this).val())) {
+				$(this).parent().addClass('item-form_error');
+				isValid = false;
+			}
+		});
+			
+			// Validate checkbox
+			if (!$(this).find('.checkbox input[type="checkbox"]').is(':checked')) {
+				$(this).find('.checkbox').addClass('item-form_error');
+				isValid = false;
+			}
+
+		
+		// If form is not valid, prevent submission
+		if (isValid) {
+			event.preventDefault();
+			$.fancybox.close(true);
+			setTimeout(function() {
+				$.fancybox.open({
+					src  : '#modal-thanks-application',
+					type: 'inline',
+					touch: false
+				  });
+			}, 400);
+			
+			
+		} else {
+			event.preventDefault();
+		}
+	});
+
+
+	$('.item-form_number input').on('keypress', function(event) {
+		var charCode = (event.which) ? event.which : event.keyCode;
+		if (charCode < 48 || charCode > 57) {
+			event.preventDefault();
+		}
+	});
+
 
 	//Попап менеджер FancyBox
 	//Документация: http://fancybox.net/howto
@@ -239,6 +385,14 @@ $(".menu-overlay").click(function() {
 		containerCssClass: "test",
 		tags: true,
 	});
+
+	$('.item-form_select select').select2({
+		closeOnSelect : true,
+		allowClear: false,
+		containerCssClass: "test",
+		tags: true,
+        dropdownCssClass: 'simple-select' // Замените на нужное имя класса
+    });
 
 
 	//Кнопка "Наверх"
