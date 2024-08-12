@@ -16,12 +16,13 @@
 	<link rel="stylesheet" href="libs/fontawesome-free-5.12.0-web/css/all.min.css" />
 	<link rel="stylesheet" href="libs/fancybox-master/dist/jquery.fancybox.min.css" />
 	<link rel="stylesheet" href="libs/countdown/jquery.countdown.css" />
+	<link rel="stylesheet" href="libs/vanillajs-datepicker-master/dist/css/datepicker.min.css">
 	<link rel="stylesheet" href="libs/select2/select2.css" />
 	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick.css" />
 	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick-theme.css" />
 	<link rel="stylesheet" href="css/fonts.css" />
-	<link rel="stylesheet" href="css/main.css?ver=1.4" />
-	<link rel="stylesheet" href="css/media.css?ver=1.4" />
+	<link rel="stylesheet" href="css/main.css?ver=1.8" />
+	<link rel="stylesheet" href="css/media.css?ver=1.8" />
 </head>
 <body>
 
@@ -440,6 +441,60 @@
 		</div>
 	</div>
 
+	<div id="modal-help" class="modal-block">
+		<div class="modal-wrap">
+			<div class="title-section">Задать вопрос</div>
+			<div class="descr-title">Задайте вопрос и с вами свяжется менеджер</div>
+			<div class="form-help">
+				<form>
+					<div class="item-form">
+						<div class="item-form__icon">
+							<img src="img/input_name.svg" alt="alt">
+						</div>
+						<input type="text" placeholder="Ваше имя" class="required">
+					</div>
+					<div class="item-form">
+						<div class="item-form__icon">
+							<img src="img/input_email.svg" alt="alt">
+						</div>
+						<input type="text" placeholder="Ваш E-mail" class="required email">
+					</div>
+					<div class="item-form">
+						<div class="item-form__icon">
+							<img src="img/input_text.svg" alt="alt">
+						</div>
+						<textarea placeholder="Ваш вопрос" class="required"></textarea>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" class="required" />
+							<span>Даю согласие на обработку персональных данных, и согласен с <a href="#">политикой конфиденциальности</a></span>
+						</label>
+					</div>
+					<div class="btn-main">
+						<span class="btn-main__text">Отправить</span> 
+						<span class="btn-main__icon"><img src="img/arrow.svg" alt="alt"></span>
+						<input type="submit">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal-thanks-application" class="modal-block">
+		<div class="modal-wrap">
+			<div class="title-section">Спасибо</div>
+			<div class="descr-title">Ваша заявка отправлена. Мы свяжемся с Вами в ближайшее время</div>
+		</div>
+	</div>
+
+	<div id="modal-thanks-review" class="modal-block">
+		<div class="modal-wrap">
+			<div class="title-section">Спасибо</div>
+			<div class="descr-title">Ваша отзыв принят.</div>
+		</div>
+	</div>
+
 	<!--[if lt IE 9]>
 	<script src="libs/html5shiv/es5-shim.min.js"></script>
 	<script src="libs/html5shiv/html5shiv.min.js"></script>
@@ -452,14 +507,16 @@
 	<script src="libs/slick-1.5.9/slick/slick.min.js"></script>
 	<script src="libs/scroll2id/PageScroll2id.min.js"></script>
 	<script src="libs/mask/jquery.maskedinput.js"></script>
+	<script src="libs/vanillajs-datepicker-master/dist/js/datepicker-full.min.js"></script>
+	<script src="libs/vanillajs-datepicker-master/dist/js/locales/ru.js"></script>
 	<script src="libs/countdown/jquery.plugin.js"></script>
 	<script src="libs/countdown/jquery.countdown.min.js"></script>
 	<script src="libs/countdown/jquery.countdown-ru.js"></script>
 	<script src="libs/select2/select2.js"></script>
-	<script src="js/common.js?ver=1.4"></script>
+	<script src="js/common.js?ver=1.8"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 	<script>
-		$(document).ready(function() {
+		$(document).ready(function() { 
 		ymaps.ready(init);
 
 		function init() {
