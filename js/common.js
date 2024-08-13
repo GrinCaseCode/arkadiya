@@ -202,9 +202,45 @@ $(".menu-overlay").click(function() {
 		const rangepicker = new DateRangePicker(elem, {
 			format: 'dd/mm/yyyy',
 			language: 'ru',
-			autohide: true
+			autohide: true,
 		}); 
+
+		document.querySelector('input[name="range-end"]').value = '';
+		
 	}
+
+	$('.quantity').each(function() {
+		var $quantity = $(this);
+		var $valueSpan = $quantity.find('.quantity__value span');
+		var minValue = parseInt($quantity.find('.quantity__value').attr('min'));
+	
+		function checkEmptyState(value) {
+		  if (value === 0) {
+			$quantity.addClass('quantity_empty');
+		  } else {
+			$quantity.removeClass('quantity_empty');
+		  }
+		}
+	
+		$quantity.find('.plus').on('click', function() {
+		  var currentValue = parseInt($valueSpan.text());
+		  var newValue = currentValue + 1;
+		  $valueSpan.text(newValue);
+		  checkEmptyState(newValue);
+		});
+	
+		$quantity.find('.minus').on('click', function() {
+		  var currentValue = parseInt($valueSpan.text());
+		  if (currentValue > minValue) {
+			var newValue = currentValue - 1;
+			$valueSpan.text(newValue);
+			checkEmptyState(newValue);
+		  }
+		});
+	
+		// Initial check for empty state
+		checkEmptyState(parseInt($valueSpan.text()));
+	  });
 
 
 	  //Валидация отзыва
@@ -353,6 +389,80 @@ $(".menu-overlay").click(function() {
 			}, 400);
 			
 			
+		} else {
+			event.preventDefault();
+		}
+	});
+
+	 //Валидация Контакты
+	 $('.form-contacts form').on('submit', function(event) {
+		var isValid = true;
+		
+		// Remove previous error classes
+		$(this).find('.item-form_error').removeClass('item-form_error');
+		
+		// Validate required fields
+		$(this).find('.required').each(function() {
+			if ($(this).val() === '') {
+				$(this).parent().addClass('item-form_error');
+				isValid = false;
+			}
+		});
+		
+		// Validate email
+		var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+		$(this).find('.email').each(function() {
+			if (!emailPattern.test($(this).val())) {
+				$(this).parent().addClass('item-form_error');
+				isValid = false;
+			}
+		});
+			
+			// Validate checkbox
+			if (!$(this).find('.checkbox input[type="checkbox"]').is(':checked')) {
+				$(this).find('.checkbox').addClass('item-form_error');
+				isValid = false;
+			}
+
+		
+		// If form is not valid, prevent submission
+		if (isValid) {
+			event.preventDefault();
+			$.fancybox.close(true);
+			setTimeout(function() {
+				$.fancybox.open({
+					src  : '#modal-thanks-application',
+					type: 'inline',
+					touch: false
+				  });
+			}, 400);
+			
+			
+		} else {
+			event.preventDefault();
+		}
+	});
+
+	//Валидация Калькулятора
+	$('.form-calculator form').on('submit', function(event) {
+		var isValid = true;
+		
+		// Remove previous error classes
+		$(this).find('.item-form_error').removeClass('item-form_error');
+		
+		// Validate required fields
+		$(this).find('.required').each(function() {
+			if ($(this).val() === '') {
+				$(this).parent().addClass('item-form_error');
+				isValid = false;
+			}
+		});
+		
+		
+		// If form is not valid, prevent submission
+		if (isValid) {
+			event.preventDefault();
+			$(".calculator-result").slideDown(200);
 		} else {
 			event.preventDefault();
 		}
