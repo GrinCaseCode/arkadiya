@@ -515,7 +515,7 @@ $(".menu-overlay").click(function() {
     });
 
     $linkBack.on('click', function(event) {
-        event.preventDefault();
+        event.preventDefault(); 
         
         $tabBooking.eq(1).hide();
         $tabBooking.eq(0).fadeIn();
