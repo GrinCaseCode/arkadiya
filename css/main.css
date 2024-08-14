@@ -3096,3 +3096,65 @@ form {
 	line-height: 124%;
 	letter-spacing: -0.02em;
 }
+.billbord-page_error {
+	min-height: 39.427vw;
+	padding-top: 10.885vw;
+	background-image: url(../img/billbord_error.jpg);
+	text-align: center;
+}
+.billbord-page_error .title-big {
+	font-size: 10.417vw;
+	line-height: 7.292vw;
+}
+.billbord-page_error .title-block {
+	margin-bottom: 3.333vw;
+	text-align: center;
+	color: #fff;
+}
+.billbord-page_tour {
+	background-image: url(../img/billbord_tour.jpg);
+}
+.page-tour {
+	padding-bottom: 4.583vw;
+}
+.tour-wrap iframe {
+	height: 27.24vw;
+	width: 100%;
+	border: none;
+}
+
+.modal-wrap_booking {
+	width: 53.281vw;
+}
+.steps-booking {
+	margin-bottom: 1.771vw;
+	color: rgba(194, 154, 106, 0.72);
+	text-align: center;
+}
+.tab-booking .title-block {
+	margin-bottom: 0.781vw;
+	text-align: center;
+}
+.buttons-booking {
+	padding-top: 1.823vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.modal-wrap.modal-wrap_booking .btn-main {
+	min-width: 12.656vw;
+	margin: 0;
+	width: auto;
+}
+.modal-wrap_booking .row > div {
+	padding: 0 0.365vw;
+}
+.modal-wrap_booking .row {
+	margin: 0 -0.365vw;
+}
+.tab-booking {
+	display: none;
+}
+.tab-booking:first-child {
+	display: block;
+}

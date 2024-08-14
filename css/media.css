@@ -814,7 +814,7 @@
         padding: 6px;
     }
     .modal-wrap {
-        padding: 25px 20px;
+        padding: 29px 20px;
         width: 100%;
         border-radius: 8px;
     }
@@ -1458,6 +1458,48 @@
     }
     .price-main {
         font-size: 22px;
+    }
+    .billbord-page_error {
+        min-height: 655px;
+        padding-top: 190px;
+    }
+    .billbord-page_error .title-big {
+        font-size: 145px;
+        line-height: 115px;
+    }
+    .billbord-page_error .title-block {
+        margin: 0 auto;
+        margin-bottom: 52px;
+        max-width: 285px;
+    }
+    .page-tour {
+        padding-bottom: 40px;
+    }
+    .tour-wrap iframe {
+        height: 400px;
+    }
+    .modal-wrap_booking {
+        width: 100%;
+    }
+    .steps-booking {
+        margin-bottom: 22px;
+    }
+    .tab-booking .title-block {
+        margin-bottom: 15px;
+    }
+    .buttons-booking {
+        padding-top: 15px;
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .modal-wrap.modal-wrap_booking .btn-main {
+        min-width: 243px;
+    }
+    .modal-wrap_booking .row > div {
+        padding: 0 7px;
+    }
+    .modal-wrap_booking .row {
+        margin: 0 -7px;
     }
 }
  

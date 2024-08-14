@@ -468,6 +468,86 @@ $(".menu-overlay").click(function() {
 		}
 	});
 
+	//Валидация бронирования модалка
+	var $form = $('.form-booking-modal form');
+    var $tabBooking = $('.tab-booking');
+    var $stepsBooking = $('.steps-booking span');
+    var $linkClose = $('.link-page_close');
+    var $linkBack = $('.link-page_back');
+    var $btnNext = $('.btn-main_next');
+
+    $tabBooking.eq(1).hide();
+
+    function validateTab($tab) {
+        var isValid = true;
+        $tab.find('.item-form_error').removeClass('item-form_error');
+        
+        // Validate required fields
+        $tab.find('.required').each(function() {
+            if ($(this).val() === '') {
+                $(this).parent().addClass('item-form_error');
+                isValid = false;
+            }
+        });
+        
+        // Validate email
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        $tab.find('input[type="email"]').each(function() {
+            if (!emailPattern.test($(this).val())) {
+                $(this).parent().addClass('item-form_error');
+                isValid = false;
+            }
+        });
+
+        return isValid;
+    }
+
+    $btnNext.on('click', function(event) {
+        event.preventDefault();
+        var $currentTab = $tabBooking.eq(0);
+
+        if (validateTab($currentTab)) {
+            $currentTab.hide();
+            $tabBooking.eq(1).fadeIn();
+
+            $stepsBooking.text('2');
+        }
+    });
+
+    $linkBack.on('click', function(event) {
+        event.preventDefault();
+        
+        $tabBooking.eq(1).hide();
+        $tabBooking.eq(0).fadeIn();
+
+        $stepsBooking.text('1');
+    });
+
+    // Handle form submission
+    $form.on('submit', function(event) {
+        var $currentTab = $tabBooking.eq(1);
+        
+        if (validateTab($currentTab)) {
+            event.preventDefault();
+            $.fancybox.close(true);
+            setTimeout(function() {
+                $.fancybox.open({
+                    src  : '#modal-thanks-application',
+                    type: 'inline',
+                    touch: false
+                });
+            }, 400);
+        } else {
+            event.preventDefault();
+        }
+    });
+
+    // Handle the "Close" button click
+    $linkClose.on('click', function(event) {
+        event.preventDefault();
+        $.fancybox.close();
+    });
+
 
 	$('.item-form_number input').on('keypress', function(event) {
 		var charCode = (event.which) ? event.which : event.keyCode;
