@@ -21,8 +21,8 @@
 	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick.css" />
 	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick-theme.css" />
 	<link rel="stylesheet" href="css/fonts.css" />
-	<link rel="stylesheet" href="css/main.css?ver=1.8" />
-	<link rel="stylesheet" href="css/media.css?ver=1.8" />
+	<link rel="stylesheet" href="css/main.css?ver=1.11" />
+	<link rel="stylesheet" href="css/media.css?ver=1.11" />
 </head>
 <body>
 
@@ -462,6 +462,125 @@
 		</div>
 	</div>
 
+	<div id="modal-booking" class="modal-block">
+		<div class="modal-wrap modal-wrap_booking">
+			<div class="title-section">Заявка на бронирование</div>
+			<div class="steps-booking">Шаг <span>1</span> из 2</div>
+			<div class="form-booking-modal">
+				<form>
+					<div class="tab-booking">
+						<div class="title-block">1. Контактные данные</div>
+						<div class="row">
+							<div class="col-lg-4">
+								<div class="item-form">
+									<div class="item-form__icon">
+										<img src="img/input_name.svg" alt="alt">
+									</div>
+									<input type="text" placeholder="Ваше ФИО" class="required">
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="item-form">
+									<div class="item-form__icon">
+										<img src="img/ic_phone.svg" alt="alt">
+									</div>
+									<input type="text" placeholder="Ваш номер мобильного" class="required input-phone" inputmode="numeric">
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="item-form">
+									<div class="item-form__icon">
+										<img src="img/input_email.svg" alt="alt">
+									</div>
+									<input type="email" placeholder="Ваш E-mail" class="required">
+								</div>
+							</div>
+						</div>
+						<div class="buttons-booking">
+							<a href="#" class="link-page link-page_close">Вернуться назад</a>
+							<a href="#" class="btn-main btn-main_next"><span class="btn-main__text">Далее</span> <span class="btn-main__icon"><img src="img/arrow.svg" alt="alt"></span></a>
+						</div>
+					</div>
+					<div class="tab-booking">
+						<div class="title-block">2. Детали бронирования</div>
+						<div class="row">
+							<div class="col-lg-4">
+								<div class="item-form item-form_select">
+									<div class="item-form__icon">
+										<img src="img/input_room.svg" alt="alt">
+									</div>
+									<select class="required">
+										<option value="">Номер</option>
+										<option value="Апартаменты двухкомнатные">Апартаменты двухкомнатные</option>
+										<option value="Апартаменты-студия">Апартаменты-студия</option>
+										<option value="Люкс">Люкс</option>
+										<option value="Полулюкс">Полулюкс</option>
+										<option value="Стандарт">Стандарт</option>
+										<option value="Стандарт улучшенный">Стандарт улучшенный</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-lg-8">
+								<div id="time-picker">
+									<div class="row">
+										<div class="col-lg-6">
+											<div class="item-form item-form_date">
+												<div class="item-form__icon">
+													<img src="img/input_date.svg" alt="alt">
+												</div>
+												<input type="text" name="range-start" placeholder="Дата заезда" class="required">
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="item-form item-form_date">
+												<div class="item-form__icon">
+													<img src="img/input_date.svg" alt="alt">
+												</div>
+												<input type="text" name="range-end" placeholder="Дата выезда" class="required">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="item-form item-form_number">
+									<div class="item-form__icon">
+										<img src="img/input_name.svg" alt="alt">
+									</div>
+									<input type="text" placeholder="Количество взрослых" class="required" inputmode="numeric">
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="item-form item-form_number">
+									<div class="item-form__icon">
+										<img src="img/input_child.svg" alt="alt">
+									</div>
+									<input type="text" placeholder="Количество детей" class="required" inputmode="numeric">
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="item-form item-form_number">
+									<div class="item-form__icon">
+										<img src="img/input_child.svg" alt="alt">
+									</div>
+									<input type="text" placeholder="Возраст детей" class="required" inputmode="numeric">
+								</div>
+							</div>
+						</div>
+						<div class="buttons-booking">
+							<a href="#" class="link-page link-page_back">Вернуться назад</a>
+							<div class="btn-main">
+								<span class="btn-main__text">Далее</span> 
+								<span class="btn-main__icon"><img src="img/arrow.svg" alt="alt"></span>
+								<input type="submit">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
 	<!--[if lt IE 9]> 
 	<script src="libs/html5shiv/es5-shim.min.js"></script>
 	<script src="libs/html5shiv/html5shiv.min.js"></script>
@@ -480,7 +599,7 @@
 	<script src="libs/countdown/jquery.countdown.min.js"></script>
 	<script src="libs/countdown/jquery.countdown-ru.js"></script>
 	<script src="libs/select2/select2.js"></script>
-	<script src="js/common.js?ver=1.8"></script>
+	<script src="js/common.js?ver=1.11"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 	<script>
 		$(document).ready(function() {
